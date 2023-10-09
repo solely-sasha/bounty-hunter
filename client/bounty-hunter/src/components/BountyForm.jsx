@@ -36,8 +36,8 @@ export default function BountyForm({ addBounty }) {
 
   return (
     <main className="bounty-form ">
-      <h2 >People to Kill</h2>
-      <div >
+      <h2>People to Kill</h2>
+      <div>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -61,23 +61,17 @@ export default function BountyForm({ addBounty }) {
             name="living"
             checked={formData.living}
             onChange={handleChange}
-          
           />
+          <label for="amount">Amount:</label>
           <input
             type="number"
             name="amount"
             value={formData.amount}
             onChange={handleChange}
             placeholder="Bounty Amount"
-         
             required
           />
-          <select
-            name="type"
-            value={formData.type}
-            onChange={handleChange}
-           
-          >
+          <select name="type" value={formData.type} onChange={handleChange}>
             <option value="Sith">Sith</option>
             <option value="Jedi">Jedi</option>
           </select>

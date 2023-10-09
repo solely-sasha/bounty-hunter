@@ -2,29 +2,6 @@ const express = require("express");
 const bountyRouter = express.Router();
 const Bounty = require("../models/bountyModel");
 
-// const bounties = [
-//   {
-//     firstName: "Marneg",
-//     lastName: "Folstock",
-//     living: true,
-//     amount: 100,
-//     type: "Jedi",
-//   },
-//   {
-//     firstName: "Tarenth",
-//     lastName: "Vortex",
-//     living: false,
-//     amount: 200,
-//     type: "Sith",
-//   },
-//   {
-//     firstName: "Zethara",
-//     lastName: "Arvax",
-//     living: true,
-//     amount: 300,
-//     type: "Sith",
-//   },
-// ];
 
 bountyRouter.get("/", (req, res, next) => {
   Bounty.find({})

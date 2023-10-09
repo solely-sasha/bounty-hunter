@@ -1,13 +1,13 @@
 .bounty-item {
   background-color: #444;
   color: #fff;
-  padding: 20px;
+  padding: 1rem;
   border-radius: 8px;
   margin: 10px 10px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "martian", m;
+  font-family: "martian", monospace;
 }
 
 .bounty-item span {
