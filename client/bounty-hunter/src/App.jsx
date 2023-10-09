@@ -65,15 +65,15 @@ function App() {
 
   return (
     <div>
-      <div className=" ">
-        <div className=" ">
+      <div>
+        <div>
           <BountyForm
             formData={formData}
             addBounty={addBounty}
             onEdit={handleEdit}
           />
         </div>
-        <div className="">
+        <div>
           {bounties.map((bounty) => (
             <BountyList
               bounty={bounty}

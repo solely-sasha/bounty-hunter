@@ -30,8 +30,8 @@ export default function BountyList({ bounty, onEdit, onDelete }) {
 
   return (
     <div className="bounty-item">
-      <div className="">
-        <span className="">{bounty.living ? "🖤 KILL" : "💀 DEAD"}</span>
+      <div >
+        <span>{bounty.living ? "🖤 KILL" : "💀 DEAD"}</span>
         <div>
           {isEditing ? (
             <>
@@ -41,7 +41,6 @@ export default function BountyList({ bounty, onEdit, onDelete }) {
                 value={formData.firstName}
                 onChange={handleInputChange}
                 placeholder="First Name"
-                className=""
                 required
               />
               <input
@@ -50,16 +49,14 @@ export default function BountyList({ bounty, onEdit, onDelete }) {
                 value={formData.lastName}
                 onChange={handleInputChange}
                 placeholder="Last Name"
-                className=""
                 required
               />
-              <label className="">Living</label>
+              <label>Living</label>
               <input
                 type="checkbox"
                 name="living"
                 checked={formData.living}
                 onChange={handleInputChange}
-                className=""
               />
               <input
                 type="number"
@@ -67,14 +64,12 @@ export default function BountyList({ bounty, onEdit, onDelete }) {
                 value={formData.amount}
                 onChange={handleInputChange}
                 placeholder="Bounty Amount"
-                className=""
                 required
               />
               <select
                 name="type"
                 value={formData.type}
                 onChange={handleInputChange}
-                className=""
               >
                 <option value="Sith">Sith</option>
                 <option value="Jedi">Jedi</option>
@@ -82,26 +77,26 @@ export default function BountyList({ bounty, onEdit, onDelete }) {
             </>
           ) : (
             <>
-              <h2 className="">
+              <h2>
                 {bounty.firstName} {bounty.lastName}
               </h2>
-              <p className="">Type: {bounty.type}</p>
-              <p className="">Amount: ${bounty.amount}</p>
+              <p >Type: {bounty.type}</p>
+              <p >Amount: ${bounty.amount}</p>
             </>
           )}
         </div>
       </div>
-      <div className="">
+      <div >
         {isEditing ? (
-          <button onClick={handleSaveClick} className="">
+          <button onClick={handleSaveClick} >
             Save Changes
           </button>
         ) : (
-          <button onClick={handleEditClick} className="">
+          <button onClick={handleEditClick} >
             Edit
           </button>
         )}
-        <button onClick={() => onDelete(bounty._id)} className="">
+        <button onClick={() => onDelete(bounty._id)} >
           Delete
         </button>
       </div>
